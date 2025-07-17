@@ -29,7 +29,7 @@ class MetricsGenerator:
         # Enviamos a un endpoint HTTP que crearemos en NiFi
         try:
             response = requests.post(
-                'http://localhost:8081/metrics',  # URL corregida
+                'http://nifi:8081/metrics',  # URL corregida
                 json=data,
                 headers={'Content-Type': 'application/json'}
             )

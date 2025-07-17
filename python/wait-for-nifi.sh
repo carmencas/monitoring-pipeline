@@ -1,7 +1,9 @@
 #!/bin/bash
-echo "Waiting for NiFi to be ready..."
-until curl -f http://nifi:8080/nifi/; do
-  echo "NiFi is not ready yet..."
+echo "Waiting for NiFi full setup to complete..."
+
+while [ ! -f /opt/nifi/init/setup-complete.flag ]; do
+  echo "NiFi setup still in progress..."
   sleep 5
 done
-echo "NiFi is ready!"
+
+echo "✅ NiFi setup complete!"
