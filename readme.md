@@ -48,7 +48,7 @@ http://localhost:8080/nifi
 2. **Confirm Template**
    * Click the **Templates** icon (top toolbar)
    * Drag the template onto the canvas
-    ![Texto alternativo](assets/01-template.png "Title")
+    ![Texto alternativo](assets/01-Template.png "Title")
    * You should see `metrics_flow.xml` listed
    * (If not, ensure `./nifi/templates` is mounted to `/opt/nifi/nifi-current/conf/templates:ro`)
 
