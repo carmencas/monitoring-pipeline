@@ -103,6 +103,10 @@ Default login: **admin / admin**
 
 3. **Observe Live Data** Navigate to your dashboard—you'll see real-time graphs for response time, CPU, memory, error rate, etc.
 
+![Texto alternativo](assets/04-Grafana1.png "Title")
+![Texto alternativo](assets/05-Grafana2.png "Title")
+
+
 ## 🛠 Troubleshooting
 
 * **NiFi startup too slow?** Increase `sleep 120` in the `nifi` service command of `docker-compose.yml`.
