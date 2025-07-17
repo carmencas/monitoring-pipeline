@@ -460,7 +460,7 @@
             "type": "influxdb",
             "uid": "c8a9bdda-28d1-48f4-a13c-a9fc93371866"
           },
-          "query": "from(bucket:\"metrics\")\n  |> range(start: -1h)\n  |> filter(fn: (r) =>\n       r._measurement == \"application_metrics\" and\n       r._field       == \"response_time\" and\n       ((\"${service}\" == \"All\") or r.service     == \"${service}\") and\n       ((\"${env}\"     == \"All\") or r.environment == \"${env}\") and\n       ((\"${host}\" == \"All\") or r.host =~ /^(${host:pipe})$/)\n     )\n  |> aggregateWindow(every: 1m, fn: mean)\n  |> group(columns: [\"host\"])\n  |> last()",
+          "query": "from(bucket:\"metrics\")\n  |> range(start: -1h)\n  |> filter(fn: (r) =>\n       r._measurement == \"application_metrics\" and\n       r._field       == \"cpu_usage\" and\n       ((\"${service}\" == \"All\") or r.service     == \"${service}\") and\n       ((\"${env}\"     == \"All\") or r.environment == \"${env}\") and\n       ((\"${host}\" == \"All\") or r.host =~ /^(${host:pipe})$/)\n     )\n  |> aggregateWindow(every: 1m, fn: mean)\n  |> group(columns: [\"host\"])\n  |> last()",
           "refId": "A"
         }
       ],
